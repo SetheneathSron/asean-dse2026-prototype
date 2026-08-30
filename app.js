@@ -783,8 +783,11 @@ function renderSignup() {
 
           <div class="two-col">
             ${selectField("Country", "country", countryOptions)}
-
-            ${selectField("City", "city", cityOptions)}
+            ${selectField(
+              "City",
+              "city",
+              locationOptions[state.profile.country] || [],
+            )}
           </div>
 
           ${field("Password", "password", "password")}
