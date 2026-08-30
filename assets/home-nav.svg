@@ -1,0 +1,24 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="23.9961" height="23.9961" viewBox="0 0 23.9961 23.9961" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="HomeIcon">
+<path id="Vector" d="M2.99951 11.9981L11.9981 2.99951L20.9966 11.9981" stroke="url(#paint0_linear_0_52)" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M8.99854 20.9966V11.998H14.9976V20.9966" stroke="url(#paint1_linear_0_52)" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M2.99951 11.998V20.9966H8.99854V11.998H14.9976V20.9966H20.9966V11.998" stroke="url(#paint2_linear_0_52)" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_52" x1="11.9981" y1="2.99951" x2="11.9981" y2="11.9981" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E11D48"/>
+<stop offset="0.5" stop-color="#1E3A8A"/>
+<stop offset="1" stop-color="#581C87"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_52" x1="11.998" y1="11.998" x2="11.998" y2="20.9966" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E11D48"/>
+<stop offset="0.5" stop-color="#1E3A8A"/>
+<stop offset="1" stop-color="#581C87"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_52" x1="11.9981" y1="11.998" x2="11.9981" y2="20.9966" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E11D48"/>
+<stop offset="0.5" stop-color="#1E3A8A"/>
+<stop offset="1" stop-color="#581C87"/>
+</linearGradient>
+</defs>
+</svg>

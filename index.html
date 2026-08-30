@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASEAN DSE 2026 Climate Risk Prototype</title>
+    <link rel="stylesheet" href="./styles.css?v=4" />
+  </head>
+  <body>
+    <main
+      class="prototype"
+      aria-label="ASEAN DSE 2026 implemented Figma screens"
+    >
+      <aside class="prototype__rail" aria-label="Design screens">
+        <div class="prototype__brand">
+          <span>ASEAN DSE 2026</span>
+          <strong>13 Figma screens</strong>
+        </div>
+        <nav class="screen-picker" id="screenPicker"></nav>
+      </aside>
+      <section class="phone-shell" aria-live="polite">
+        <div class="device-scale-box">
+          <div class="device-frame" id="deviceFrame">
+            <span class="device-button device-button--silent"></span>
+            <span class="device-button device-button--volume-up"></span>
+            <span class="device-button device-button--volume-down"></span>
+            <span class="device-button device-button--action"></span>
+            <div class="device-bezel">
+              <div class="phone" id="phoneDevice">
+                <div class="status-bar" aria-hidden="true">
+                  <span class="status-time" id="statusTime">9:41</span>
+                  <span class="status-icons">
+                    <span class="signal-icon"
+                      ><i></i><i></i><i></i><i></i
+                    ></span>
+                    <span class="status-lte">LTE</span>
+                    <span class="battery-icon"><i></i></span>
+                  </span>
+                </div>
+                <div class="dynamic-island" aria-hidden="true"><i></i></div>
+                <div class="phone-screen" id="phone"></div>
+                <div
+                  class="toast"
+                  id="toast"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js?v=4"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="23.9961" height="23.9961" viewBox="0 0 23.9961 23.9961" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="MapIcon" clip-path="url(#clip0_0_32)">
+<path id="Vector" d="M0.999837 5.99902V21.9964L7.9987 17.9971L15.9974 21.9964L22.9963 17.9971V1.99967L15.9974 5.99902L7.9987 1.99967L0.999837 5.99902Z" stroke="#90959E" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M7.9987 1.99967V17.9971" stroke="#90959E" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M15.9974 5.99902V21.9964" stroke="#90959E" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_32">
+<rect width="23.9961" height="23.9961" fill="white"/>
+</clipPath>
+</defs>
+</svg>
