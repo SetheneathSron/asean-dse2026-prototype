@@ -4706,43 +4706,61 @@ function injectInteractionStyles() {
 ========================================================= */
 
 function updateResponsiveScale() {
-  const vw = window.innerWidth || 440;
+  const viewport = window.visualViewport;
 
-  const vh = window.innerHeight || 956;
+  const vw = viewport?.width || window.innerWidth || 440;
+  const vh = viewport?.height || window.innerHeight || 956;
 
   const isPhone = handsetQuery.matches;
 
   document.body.classList.toggle("is-phone", isPhone);
 
   if (isPhone) {
-    const isLandscapePhone = vw > vh && vh <= 520;
+    const DESIGN_WIDTH = 440;
+    const DESIGN_HEIGHT = 956;
 
-    const scale = isLandscapePhone ? Math.min(vh / 760, vw / 440) : vw / 440;
+    const widthScale = vw / DESIGN_WIDTH;
+    const heightScale = vh / DESIGN_HEIGHT;
 
-    const screenHeight = isLandscapePhone ? 760 : Math.max(760, vh / scale);
+    // Fit the ENTIRE prototype inside the visible Safari viewport
+    const scale = Math.min(widthScale, heightScale);
 
-    const screenX = isLandscapePhone ? Math.max(0, (vw - 440 * scale) / 2) : 0;
+    const scaledWidth = DESIGN_WIDTH * scale;
+    const scaledHeight = DESIGN_HEIGHT * scale;
+
+    // Center it horizontally and vertically
+    const screenX = Math.max(0, (vw - scaledWidth) / 2);
+    const screenY = Math.max(0, (vh - scaledHeight) / 2);
 
     document.documentElement.style.setProperty("--app-scale", scale.toFixed(4));
 
     document.documentElement.style.setProperty(
       "--screen-h",
-      `${screenHeight.toFixed(2)}px`,
+      `${DESIGN_HEIGHT}px`,
     );
-
-    document.documentElement.style.setProperty("--device-scale", "1");
 
     document.documentElement.style.setProperty(
       "--screen-x",
       `${screenX.toFixed(2)}px`,
     );
 
+    document.documentElement.style.setProperty(
+      "--screen-y",
+      `${screenY.toFixed(2)}px`,
+    );
+
+    document.documentElement.style.setProperty(
+      "--visible-vh",
+      `${vh.toFixed(2)}px`,
+    );
+
+    document.documentElement.style.setProperty("--device-scale", "1");
+
     return;
   }
 
-  const maxWidth = Math.max(320, vw - 56);
-
-  const maxHeight = Math.max(520, vh - 56);
+  const maxWidth = Math.max(320, window.innerWidth - 56);
+  const maxHeight = Math.max(520, window.innerHeight - 56);
 
   const scale = Math.min(maxWidth / 476, maxHeight / 1000, 1);
 
@@ -4756,6 +4774,8 @@ function updateResponsiveScale() {
   document.documentElement.style.setProperty("--app-scale", "1");
 
   document.documentElement.style.setProperty("--screen-x", "0px");
+
+  document.documentElement.style.setProperty("--screen-y", "0px");
 }
 
 /* =========================================================
@@ -5207,6 +5227,12 @@ document.addEventListener("change", handleSearchInput);
 window.addEventListener("resize", updateResponsiveScale);
 
 window.addEventListener("orientationchange", updateResponsiveScale);
+
+if (window.visualViewport) {
+  window.visualViewport.addEventListener("resize", updateResponsiveScale);
+
+  window.visualViewport.addEventListener("scroll", updateResponsiveScale);
+}
 
 window.addEventListener("hashchange", () => {
   go(getRequestedScreen() || "welcome");

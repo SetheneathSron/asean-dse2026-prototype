@@ -2965,12 +2965,16 @@ input.control {
     overflow: hidden;
   }
 
+  body {
+    background: #fff;
+  }
+
   .prototype {
+    position: relative;
     width: 100vw;
-    height: 100dvh;
-    min-height: 100dvh;
+    height: var(--visible-vh, 100dvh);
+    min-height: 0;
     padding: 0;
-    display: block;
     overflow: hidden;
   }
 
@@ -2984,10 +2988,10 @@ input.control {
   .device-bezel,
   .phone {
     width: 100vw;
-    height: 100dvh;
-    min-height: 100dvh;
-    padding: 0;
+    height: var(--visible-vh, 100dvh);
+    min-height: 0;
     margin: 0;
+    padding: 0;
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -3001,16 +3005,16 @@ input.control {
   .phone {
     position: relative;
     overflow: hidden;
-    background: #fff;
   }
 
   .phone-screen {
     position: absolute;
-    top: 0;
-    left: 0;
+
+    left: var(--screen-x, 0px);
+    top: var(--screen-y, 0px);
 
     width: 440px;
-    height: var(--screen-h);
+    height: 956px;
 
     transform: scale(var(--app-scale));
     transform-origin: top left;
