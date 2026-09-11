@@ -556,7 +556,7 @@ function renderWelcome() {
         style="top:339px;"
       >
         Welcome To
-        <span class="large">[Name]!</span>
+        <span class="large">Klimo</span>
       </h1>
 
       <p
